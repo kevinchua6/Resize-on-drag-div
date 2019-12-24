@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <style>
+		html, 
+		body {
+			word-break: break-all;
+			margin-left: 10px;
+			height: 100%;
+			padding: 2px;
+		}
+
+		#right_panel {
+			top: 0;
+			position: fixed;
+			width: 96px;
+			padding-left: 4px;
+			height: 100%;
+			right: 0;
+			background-color: #f0f0f0;
+			word-break: break-all;
+		}
+
+		#resize {
+			background-color: #ccc;
+			position: absolute;
+			left: 0;
+			width: 4px;
+			height: 100%;
+			cursor: w-resize;
+		}
+	  </style>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  </head>
+  <body>	<div id="right_panel">
+		<div id="resize"></div>
+		<p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+
+		
+	</div>	
+	<script type="text/javascript" src="resources/jquery.js"></script>
+	<script>
+		document.body.style.marginRight = $(document).width() - $('#resize').offset().left + "px";
+		var m_pos;
+		function resize(e){
+			
+		  //get parent of resize div 
+		  var parent = resize_el.parentNode;
+		  //Find how much the resize div has moved 
+		  var dx = m_pos - e.x;
+		  //assign the value to the position of my resize div
+		  m_pos = e.x;
+		  parent.style.width = (parseInt(getComputedStyle(parent, '').width) + dx) + "px";
+
+		  document.body.style.marginRight = $(document).width() - e.x + "px";
+  
+  
+		}
+  
+		  var resize_el = document.getElementById("resize");
+  
+		  resize_el.addEventListener("mousedown", function(e){
+			e.preventDefault();
+			  m_pos = e.x;
+			  document.addEventListener("mousemove", resize, false);
+		  }, false);
+  
+		  document.addEventListener("mouseup", function(){
+			  document.removeEventListener("mousemove", resize, false);
+		  }, false);
+	
+	</script>
+
+
+
+
+
+
+	<p>Search Results
+		Web results
+		Resize a div on border drag and drop without adding extra ...
+		https://stackoverflow.com › questions › resize-a-div-on-border-drag-and-d...
+		3 answers
+		It is certainly possible to do this without an extra div. Use css and :after to create the border and change the cursor. Use MouseEvent.offsetX to determine ...
+		Making a resizable div in JS is not easy as you think - Medium
+		https://medium.com › the-z › making-a-resizable-div-in-js-is-not-easy-as-y...
+		May 10, 2018 - Here comes the JS. The mouse trigger the mousedown event on the resizer. Then catch the mousemove event on the resizer to handle begin to resize. With the bottom-right resizer, when the user drags that resizer, the element's width will equal to the x position of the mouse minus the x position of the element.
+		People also search for
+		css resize handle
+		resizable div jquery
+		angular resizable div
+		resizable div react
+		resizable div codepen
+		snap svg resize element
+		interact.js - JavaScript drag and drop, resizing and multi-touch ...
+		https://interactjs.io
+		JavaScript drag and drop, resizing, and multi-touch gestures for modern ... from 'interactjs' interact('.item').draggable({ onmove(event) { console.log(event.pageX ...
+		Simple Javascript and CSS Draggable and Resizable div
+		https://codepen.io › jkasun › pen › QrLjXP
+		<div class="popup-header noselect">Click here to move</div>. 10. <p>Move</p>. 11. <p>this</p>. 12. <p>DIV</p>. 13. </div>.
+		Resizable | jQuery UI
+		https://jqueryui.com › resizable
+		Enable any DOM element to be resizable. With the cursor grab the right or bottom border and drag to the desired width or height. view source ...
+		Resize and Drag Elements with JavaScript | TechSlides
+		techslides.com › resize-and-drag-elements-with-javascript
+		Feb 26, 2015 - Dragging or resizing elements or divs on the screen is a pretty popular feature of modern user interfaces. It's pretty awesome that there is a ...
+		Draggable (and Resizable) <div> using jQuery - JSFiddle
+		jsfiddle.net › jfebL
+		Test your JavaScript, CSS, HTML or CoffeeScript online with JSFiddle code editor. ... <div id="resizemove" class="demodiv">This &lt;div&gt; can be resized and ...
+		How to resize a Accessibility links
+		Skip to main content
+		Accessibility help
+		Accessibility feedback
+		Happy Holidays 2019!
+		About 302,000 results (0.48 seconds) 
+		Search Results
+		Web results
+		Resize a div on border drag and drop without adding extra ...
+		https://stackoverflow.com › questions › resize-a-div-on-border-drag-and-d...
+		3 answers
+		It is certainly possible to do this without an extra div. Use css and :after to create the border and change the cursor. Use MouseEvent.offsetX to determine ...
+		Making a resizable div in JS is not easy as you think - Medium
+		https://medium.com › the-z › making-a-resizable-div-in-js-is-not-easy-as-y...
+		May 10, 2018 - Here comes the JS. The mouse trigger the mousedown event on the resizer. Then catch the mousemove event on the resizer to handle begin to resize. With the bottom-right resizer, when the user drags that resizer, the element's width will equal to the x position of the mouse minus the x position of the element.
+		People also search for
+		css resize handle
+		resizable div jquery
+		angular resizable div
+		resizable div react
+		resizable div codepen
+		snap svg resize element
+		interact.js - JavaScript drag and drop, resizing and multi-touch ...
+		https://interactjs.io
+		JavaScript drag and drop, resizing, and multi-touch gestures for modern ... from 'interactjs' interact('.item').draggable({ onmove(event) { console.log(event.pageX ...
+		Simple Javascript and CSS Draggable and Resizable div
+		https://codepen.io › jkasun › pen › QrLjXP
+		<div class="popup-header noselect">Click here to move</div>. 10. <p>Move</p>. 11. <p>this</p>. 12. <p>DIV</p>. 13. </div>.
+		Resizable | jQuery UI
+		https://jqueryui.com › resizable
+		Enable any DOM element to be resizable. With the cursor grab the right or bottom border and drag to the desired width or height. view source ...
+		Resize and Drag Elements with JavaScript | TechSlides
+		techslides.com › resize-and-drag-elements-with-javascript
+		Feb 26, 2015 - Dragging or resizing elements or divs on the screen is a pretty popular feature of modern user interfaces. It's pretty awesome that there is a ...
+		Draggable (and Resizable) <div> using jQuery - JSFiddle
+		jsfiddle.net › jfebL
+		Test your JavaScript, CSS, HTML or CoffeeScript online with JSFiddle code editor. ... <div id="resizemove" class="demodiv">This &lt;div&gt; can be resized and ...
+		How to resize a div with mouse drag with html css and javascript
+		findnerd.com › list › view › How-to-resize-a-div-with-mouse-drag-with-ht...
+		Have you ever taken a risk at doing some movement utilizing plain javascript or moving divs here and there or resizing them?! all things considered, you know ...
+		Let a user resize the width of an element - Tryit Editor v3.6
+		https://www.w3schools.com › css › tryit › filename=trycss3_resize_width
+		div { border: 2px solid; padding: 20px; width: 300px; resize: horizontal; overflow: ... <p>To resize: Click and drag the bottom right corner of this div element.</p>
+		CSS resize property - W3Schools
+		https://www.w3schools.com › cssref › css3_pr_resize
+		Here, the user can resize both the height and width of a <div> element: div { resize: both; overflow: auto; }. Try it Yourself ». More "Try it Yourself" examples below ...
+		Searches related to resize div javascript drag
+		
+		resizable div
+		
+		jquery resizable
+		
+		drag and drop javascript demo
+		
+		css resize handle
+		
+		javascript drag and drop connectors
+		
+		draggable div
+		
+		resizable div react
+		
+		jquery resizable panels
+		Page navigation
+			1	
+		2
+			
+		3
+			
+		4
+			
+		5
+			
+		6
+			
+		7
+			
+		8
+			
+		9
+			
+		10
+			
+		Next
+		Footer links
+		HelpSend feedbackPrivacyTerms
+		iv with mouse drag with html css and javascript AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+
+  </body>
+
+</html>
